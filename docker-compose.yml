@@ -1,0 +1,20 @@
+version: "3.7"
+
+networks:
+  public:
+    external: true
+
+services:
+  example:
+    image: r.planetary-quantum.com/quantum-public/example-go-app:$VERSION
+    environment:
+      HELLO_RESPONSE: $HELLO_RESPONSE
+    networks:
+      - public
+    deploy:
+      replicas: 2
+    labels:
+      traefik.enable: "true"
+      traefik.docker.network: "public"
+      traefik.frontend.rule: "Host:go-example.planetary-quantum.org"
+      traefik.port: "8080"

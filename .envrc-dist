@@ -1,0 +1,10 @@
+# APP
+export HELLO_RESPONSE=World
+
+# Deployment - Credentials: https://id.planetary-quantum.com/
+export QUANTUM_USER=
+export QUANTUM_PASSWORD=
+
+# Deployment - Your cluster and stack
+export QUANTUM_ENDPOINT=quantum-staging
+export QUANTUM_STACK=example-go-app
